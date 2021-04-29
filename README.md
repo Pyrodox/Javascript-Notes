@@ -10,7 +10,7 @@
 ## Grammar and Types
 * case sensitive, so lower case and upper case matter
 * uses unicode character set, so strange characters like one with marks on top can be used in JS
-* semicolons are used to mark the end of a statement and are only needed for code on the same line: so for example: `for(let a = 0; a < 5; a++)'
+* semicolons are used to mark the end of a statement and are only needed for code on the same line: so for example: `for(let a = 0; a < 5; a++)`
 * It is not necessary for most other cases, but it is good practice to use semicolons to prevent some errors
 * JS is read from left to right and whitespaces that aren't in strings are ignored  
 
@@ -126,3 +126,31 @@
   * base 8 has a leading 0, or a 0o or a 0O, can only contain numbers 0-7
   * base 16 has a leading 0x or 0X, can have numbers 0-9 and letters A-F or a-f
   * base 2 has a leading 0b or 0B and can only have the numbers 0-1
+  * `0, 117, -345, 123456789123456789n             (decimal, base 10)`
+    `015, 0001, -0o77, 0o777777777777n             (octal, base 8)`
+    `0x1123, 0x00111, -0xF1A7, 0x123456789ABCDEFn  (hexadecimal, "hex" or base 16)`
+    `0b11, 0b0011, -0b11, 0b11101001010101010101n  (binary, base 2)`
+  #### Floating Point Literals
+  * following parts
+  * decimal integer that is singed by a preceding + or -
+  * decimal point
+  * fractiion
+  * exponent which is an e or an E followed by int that can be signed
+  * `3.1415926`
+  * `-.123456789`
+  * `-3.1E+12`
+  * `.1e-23`
+  * Syntax: `[(+|-)][digits].[digits][(E|e)[(+|-)]digits]`
+  #### Object Literals:
+  * list of 0 or more properties in a {}
+  * object literals should not be used at the geinning of a statement because the { will be interpreted as a start to a block
+  * object property names can be any string, even an empty string
+  * if property name is not a proper identifier, then it must be enclosed in quotes and can be called using an array notation instead of a dot notation
+  #### RexExp Literals:
+  * a pattern using regex enclosed by /'s 
+  #### String Literals:
+  * enclosed in " or ' marks
+  * should use literals unless specifically need a string object
+  * .length property is also useable
+  * backtick enclosures instead of single or double quotes allows you to interpret the strings like a Python f-string and you can do multi line strings
+  * some important backslash special characters include \n (new line) \b (backspace) \t (tab) \\ (backslash character) \' (single quote character) \" (double quote character)
